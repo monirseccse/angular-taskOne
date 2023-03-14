@@ -32,6 +32,10 @@ const appRoutes:Routes=[
     {
       path: 'grandchild-a', // child route path
       component: GrandchildAComponent // child route component that the router renders
+    },
+    {
+      path:'grandchild-a2',
+      component:GrandchildA2Component
     }
   ]
 },
@@ -39,7 +43,12 @@ const appRoutes:Routes=[
 children:[{
   path:'grand-child-b',
   component:GrandChildBComponent
-}]
+},
+{
+  path:'grand-child-b2',
+  component:GrandChildB2Component
+}
+]
 },
 {path:'Contact',component:ContactComponent},
 {path:'Personal',component:PersonalComponent},
