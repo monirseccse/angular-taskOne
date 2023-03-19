@@ -19,6 +19,9 @@ import { GrandchildAComponent } from './grandchild-a/grandchild-a.component';
 import { GrandChildBComponent } from './grand-child-b/grand-child-b.component';
 import { GrandchildA2Component } from './grandchild-a2/grandchild-a2.component';
 import { GrandChildB2Component } from './grand-child-b2/grand-child-b2.component';
+import { ModaloneComponent } from './modalone/modalone.component';
+import { ModaltwoComponent } from './modaltwo/modaltwo.component';
+import { ModalthreeComponent } from './modalthree/modalthree.component';
 
 const appRoutes:Routes=[
 {path:'',redirectTo:'Home',pathMatch: 'full'},
@@ -70,7 +73,10 @@ children:[{
     GrandchildAComponent,
     GrandChildBComponent,
     GrandchildA2Component,
-    GrandChildB2Component
+    GrandChildB2Component,
+    ModaloneComponent,
+    ModaltwoComponent,
+    ModalthreeComponent
   ],
   imports: [
     BrowserModule,
