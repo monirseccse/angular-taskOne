@@ -22,13 +22,17 @@ import { GrandChildB2Component } from './grand-child-b2/grand-child-b2.component
 import { ModaloneComponent } from './modalone/modalone.component';
 import { ModaltwoComponent } from './modaltwo/modaltwo.component';
 import { ModalthreeComponent } from './modalthree/modalthree.component';
+import { ProductComponent } from './product/product.component';
+import { ProfessionComponent } from './about/profession/profession.component';
 
 const appRoutes:Routes=[
 {path:'',redirectTo:'Home',pathMatch: 'full'},
 {path:'Home',component:HomeComponent},
+
 {
   path:'About',component:AboutComponent
 },
+{path:'About/:name',component:AboutComponent},
 {path:'child-a',component:ChildAComponent,
 
   children:[
@@ -55,6 +59,7 @@ children:[{
 },
 {path:'Contact',component:ContactComponent},
 {path:'Personal',component:PersonalComponent},
+{path:'product',component:ProductComponent},
 {path:'**',component:ErrorComponent}
 ]
 @NgModule({
@@ -76,7 +81,9 @@ children:[{
     GrandChildB2Component,
     ModaloneComponent,
     ModaltwoComponent,
-    ModalthreeComponent
+    ModalthreeComponent,
+    ProductComponent,
+    ProfessionComponent
   ],
   imports: [
     BrowserModule,
