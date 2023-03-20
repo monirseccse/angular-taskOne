@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "task": {
+    "Task": {
       "projectType": "application",
       "schematics": {},
       "root": "",
@@ -25,7 +25,6 @@
               "src/assets"
             ],
             "styles": [
-              "./node_modules/bootstrap/dist/css/bootstrap.min.css",
               "src/styles.css"
             ],
             "scripts": []
@@ -61,10 +60,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "task:build:production"
+              "browserTarget": "Task:build:production"
             },
             "development": {
-              "browserTarget": "task:build:development"
+              "browserTarget": "Task:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -72,7 +71,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "task:build"
+            "browserTarget": "Task:build"
           }
         },
         "test": {
@@ -97,6 +96,6 @@
     }
   },
   "cli": {
-    "analytics": "648bd78b-835c-4e90-9c4b-75cfc6050f7b"
+    "analytics": "164d9a72-587b-4085-9514-1255688fe274"
   }
 }
