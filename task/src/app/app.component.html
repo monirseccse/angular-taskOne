@@ -1,1 +1,22 @@
+<form class="style">
+    <div class="form-group">
+      <label for="title">Enter Title</label>
+      <input type="text" class="form-control" id="title"  placeholder="Enter Title" (input)="Validate($event)">
+     <span *ngIf=" ValueOfTitle!=''&&ValueOfTitle.length<=10" >Min length must be 10</span>
+     <span *ngIf="ValueOfTitle.length>12" >Maxlength must be 12</span>
+    </div>
+    <div class="form-group">
+      <label for="SubTitle">SubTitle</label>
+      <input type="text" class="form-control" id="SubTitle" placeholder="Enter SubTitle">
+    </div>
+    <div class="form-group">
+        <label for="Description">Description</label>
+        <input type="text" class="form-control" id="Description" placeholder="Enter Description">
+      </div>
+    <div class="form-group">
+        <label for="Upload">Upload Photo</label>
+        <input type="file" class="form-control-file" accept=".png,.jpg" id="Upload">
+      </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </form>
 <app-card></app-card>

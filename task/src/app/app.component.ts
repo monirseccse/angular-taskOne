@@ -1,10 +1,19 @@
-import { Component } from '@angular/core';
+import { Component ,Input, OnInit} from '@angular/core';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
-export class AppComponent {
+export class AppComponent implements OnInit{
+  ngOnInit(): void {
+   
+  }
   title = 'Task';
+  ValueOfTitle:string='';
+  Validate(evendta:any)
+  {
+    this.ValueOfTitle=(<HTMLInputElement>evendta.target).value;
+
+  }
 }
