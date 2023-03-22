@@ -1,7 +1,8 @@
 <form  #f="ngForm" class="style" (ngSubmit)="OnSubmit(f)">
+   <div ngModelGroup="Demo">
     <div class="form-group">
       <label for="title">Enter Title</label>
-      <input type="text" id="name" name="name" class="form-control"
+      <input type="text" id="title" name="titles" class="form-control"
       required minlength="10" required maxlength="12"  (input)="TitleValidate($event)" ngModel>
      <span *ngIf=" ValueOfTitle!=''&&ValueOfTitle.length<10" >Min length must be 10</span>
      <span *ngIf="ValueOfTitle.length>12" >Maxlength must be 12</span>
@@ -23,5 +24,6 @@
         <input type="file" class="form-control-file" accept=".png,.jpg" name="Upload"ngModel>
       </div>
     <button type="submit" class="btn btn-primary" [disabled]="!f.valid">Submit</button>
+   </div>
   </form>
-<app-card></app-card>
+<app-card [demoobject]="demo" [title]="titlefield" [subtitle]="subtitlefield" [description]="descriptionfield"></app-card>
