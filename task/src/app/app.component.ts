@@ -27,15 +27,16 @@ export class AppComponent implements OnInit{
     this.descriptionfield=f.value.Demo.Descriptions;
     this.subtitlefield=f.value.Demo.SubTitle;
     this.demo.push({title:this.titlefield,subtitle:this.subtitlefield,description:this.descriptionfield})
+    f.reset();
   }
   TitleValidate(evendta:any)
   {
     this.ValueOfTitle=(<HTMLInputElement>evendta.target).value;
 
   }
-  DescriptionValidate(evendta:any)
+  DescriptionValidate(evendata:any)
   {
-    this.ValueOfDescription=(<HTMLInputElement>evendta.target).value;
+    this.ValueOfDescription=(<HTMLInputElement>evendata.target).value;
   }
 }
 type DemoObject = Array<{ title: string; subtitle: string ; description:string; }>;

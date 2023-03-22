@@ -13,22 +13,45 @@
  
 <div class="container">
   <h2>Cards with Contextual Classes</h2>
-  <div class="card">
-    <div class="card-body">
-       <h1>title is {{title}}</h1>
-       <h1>Subtitle is {{subtitle}}</h1>
-       <h1>Description is {{description}}</h1>
+  <div class="card bg-secondary text-white">
+    <div class="card-body" *ngIf="demoobject.length>0">
+      <h1>This is Cardnumber 1</h1>
+      <br>
+       <h2>title is {{demoobject[0].title}}</h2>
+       <h2>Subtitle is {{demoobject[0].subtitle}}}</h2>
+       <h2>Description is {{demoobject[0].description}}}</h2>
+    </div>
+    <div class="notfound1" *ngIf="demoobject.length<1">
+      <h1>Nothing Found to show on Card 1</h1>
+    </div> 
+  </div>
+  <br>
+  <div class="card bg-warning text-white">
+    <div class="card-body" *ngIf="demoobject.length>=2">
+      <h1>This is Cardnumber 2</h1>
+      <br>
+       <h2>title is {{demoobject[1].title}}</h2>
+       <h2>Subtitle is {{demoobject[1].subtitle}}}</h2>
+       <h2>Description is {{demoobject[1].description}}}</h2>
+
+    </div>
+    <div class="notfound" *ngIf="demoobject.length<2">
+      <h1>Nothing Found to show on Card 2</h1>
     </div>
   </div>
   <br>
-  <div class="card bg-primary text-white">
-    <div class="card-body">Primary card</div>
-  </div>
-  <br>
   <div class="card bg-success text-white">
-    <div class="card-body">Success card</div>
+    <div class="card-body"*ngIf="demoobject.length>=3">
+      <h1>This is Cardnumber 3</h1>
+    <br>
+     <h2>title is {{demoobject[2].title}}</h2>
+     <h2>Subtitle is {{demoobject[2].subtitle}}}</h2>
+     <h2>Description is {{demoobject[2].description}}}</h2>
+    </div>
+    <div class="notfound2" *ngIf="demoobject.length<3">
+      <h1>Nothing Found to show on Card 3</h1>
   </div>
 </div>
-
+</div>
 </body>
 </html>
