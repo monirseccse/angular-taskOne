@@ -16,7 +16,7 @@
         required minlength="50" required maxlength="1000" 
          (input)="DescriptionValidate($event)" ngModel>
          <span *ngIf=" ValueOfDescription!=''&& ValueOfDescription.length<50" >Min length must be 50</span>
-     <span *ngIf="ValueOfDescription.length>12" >Maxlength must be 1000</span>
+     <span *ngIf="ValueOfDescription.length>1000" >Maxlength must be 1000</span>
       </div>
     <div class="form-group">
         <label for="Upload">Upload Photo</label>
